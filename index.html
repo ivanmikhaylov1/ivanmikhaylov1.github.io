@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Персональный сайт: портфолио, навыки, контакты">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Персональный сайт</title>
+</head>
+<body>
+<header id="header" class="header">
+    <div class="header-brand">
+        <h1 class="title">Иван Михайлов</h1>
+    </div>
+
+    <div class="header-decorations">
+        <div class="header-gradient"></div>
+        <div class="header-shape"></div>
+    </div>
+
+    <!-- Остальной контент -->
+    <div class="header__images">
+        <img src="elements/my-photo.jpeg" alt="Фотография" class="header__photo" loading="lazy">
+    </div>
+    <nav class="navigation" aria-label="Главное меню">
+        <ul class="menu-list">
+            <li><a href="#about" class="menu-item menu-about">Обо мне</a></li>
+            <li><a href="#portfolio" class="menu-item menu-portfolio">Портфолио</a></li>
+            <li><a href="#skills" class="menu-item menu-skills">Навыки</a></li>
+            <li><a href="#contact" class="menu-item menu-contact">Связаться</a></li>
+        </ul>
+    </nav>
+    <img src="elements/Vector.png" alt="Декоративный вектор" class="header__vector" loading="lazy">
+</header>
+
+<!-- Основной контент -->
+<main class="main">
+    <!-- Секция "Обо мне" -->
+    <section id="about" class="section section-about">
+        <h2 class="section-title">Обо мне</h2>
+    </section>
+
+    <!-- Секция "Портфолио" -->
+    <section id="portfolio" class="section section-portfolio">
+        <h2 class="section-title">Портфолио</h2>
+        <div class="portfolio-grid">
+            <!-- Проект на Java -->
+            <div class="portfolio-item project-java">
+                <div class="portfolio-content">
+                    <h3 class="portfolio-title">Телеграм бот для новостных рекомендаций</h3>
+                    <p class="portfolio-description">Проект на Java для отбора статей на сайтах с учетом интересов пользователей с помощью ИИ</p>
+                    <div class="repo-links">
+                        <a href="https://github.com/Ylonies/news_recommendation_java" class="portfolio-link">Github репозиторий (часть 1)</a>
+                        <a href="https://github.com/ivanmikhaylov1/news_recommendation_java" class="portfolio-link">Github репозиторий (часть 2)</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Проект на Python -->
+            <div class="portfolio-item project-python">
+                <img src="elements/project.jpg" alt="Игра Морской бой" class="portfolio-image">
+                <div class="portfolio-content">
+                    <h3 class="portfolio-title">Игра морской бой в формате телеграм бота</h3>
+                    <p class="portfolio-description">Проект на Python - игра морской бой, где главная фишка - возможность запустить бой 2 ботов и кастомизировать визуал</p>
+                    <a href="https://github.com/ivanmikhaylov1/Battleships_Project" class="portfolio-link">Github репозиторий</a>
+                </div>
+            </div>
+
+            <!-- Веб-портфолио -->
+            <div class="portfolio-item project-website">
+                <div class="portfolio-content">
+                    <h3 class="portfolio-title">Персональный сайт</h3>
+                    <p class="portfolio-description">Веб-портфолио с адаптивным дизайном, анимациями и формой обратной связи. Разработан с использованием HTML5, CSS3 и JavaScript.</p>
+                    <div class="repo-links">
+                        <a href="https://github.com/ivanmikhaylov1/personal-website" class="portfolio-link">Github репозиторий</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция "Навыки" -->
+    <section id="skills" class="section section-skills">
+        <h2 class="section-title">Мои навыки</h2>
+        <div class="skills-container">
+            <!-- Языки программирования -->
+            <div class="skill-group">
+                <h3 class="skill-group-title">Языки программирования</h3>
+                <ul class="skill-list">
+                    <li class="skill-item">
+                        <span class="skill-name">Python</span>
+                        <div class="skill-progress">
+                            <div class="progress-bar" style="width: 50%;"></div>
+                        </div>
+                        <span class="skill-percentage">50%</span>
+                    </li>
+                    <li class="skill-item">
+                        <span class="skill-name">Java</span>
+                        <div class="skill-progress">
+                            <div class="progress-bar" style="width: 70%;"></div>
+                        </div>
+                        <span class="skill-percentage">70%</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Технологии -->
+            <div class="skill-group">
+                <h3 class="skill-group-title">Технологии</h3>
+                <ul class="skill-list">
+                    <li class="skill-item">
+                        <span class="skill-name">Postgres</span>
+                        <div class="skill-progress">
+                            <div class="progress-bar" style="width: 85%;"></div>
+                        </div>
+                        <span class="skill-percentage">85%</span>
+                    </li>
+                    <li class="skill-item">
+                        <span class="skill-name">Git</span>
+                        <div class="skill-progress">
+                            <div class="progress-bar" style="width: 90%;"></div>
+                        </div>
+                        <span class="skill-percentage">90%</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция "Контакты" -->
+    <section id="contact" class="section section-contact">
+        <section class="contact-form">
+            <h2 class="form-title">Связаться со мной</h2>
+            <form action="#" method="POST">
+                <label for="name" class="form-label">Ваше имя</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Введите ваше имя">
+
+                <label for="email" class="form-label">Ваш email</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="Введите ваш email">
+
+                <label for="phone" class="form-label">Ваш телефон</label>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="Введите ваш телефон">
+
+                <label for="message" class="form-label">Ваш вопрос</label>
+                <textarea id="message" name="message" class="form-input form-textarea" placeholder="Напишите ваш вопрос"></textarea>
+
+                <button type="submit" class="form-submit">Отправить</button>
+            </form>
+        </section>
+    </section>
+</main>
+
+<footer class="footer">
+    <a href="#header" class="back-to-top">
+        <img src="elements/arrow-up.png" alt="Вверх" class="back-to-top__icon">
+    </a>
+
+    <div class="social-links">
+        <a href="https://t.me/your_telegram_username" target="_blank" rel="noopener noreferrer">
+            <img src="elements/telegram-icon.png" alt="Telegram" class="social-icon">
+        </a>
+        <a href="https://github.com/ivanmikhaylov1" target="_blank" rel="noopener noreferrer">
+            <img src="elements/github-icon.png" alt="GitHub" class="social-icon">
+        </a>
+        <a href="https://leetcode.com/u/VhmMXNX3u4/" target="_blank" rel="noopener noreferrer">
+            <img src="elements/leetcode-icon.png" alt="LeetCode" class="social-icon">
+        </a>
+    </div>
+
+    <p class="copyright">@ 2025 Михайлов Иван</p>
+</footer>
+</body>
+</html>
