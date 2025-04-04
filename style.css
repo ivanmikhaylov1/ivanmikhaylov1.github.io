@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif; /* Основной шрифт для всего сайта */
+    font-family: 'Poppins', sans-serif;
 }
 
 /* =====================================================================================
@@ -519,5 +519,48 @@ body {
 
     .portfolio-item {
         min-height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .header__vector {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .header__title {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .header__description {
+        font-size: 16px;
+        text-align: center;
+        line-height: 1.4;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .content img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .button {
+        width: 100%;
+        max-width: 300px;
     }
 }
