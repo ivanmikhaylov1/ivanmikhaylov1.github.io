@@ -700,17 +700,6 @@ body {
     transform: scale(.97)
 }
 
-@media (max-width: 600px) {
-    .contact-form {
-        padding: 30px;
-        width: 95%
-    }
-
-    .form-title {
-        font-size: 1.6rem
-    }
-}
-
 .form-input.error {
     border-color: #ff4444;
     background-color: #fff8f8;
@@ -1058,5 +1047,22 @@ body {
         padding-right: 0 !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-form {
+        padding: 30px;
+        width: 95%
+    }
+
+    .form-title {
+        font-size: 1.6rem
+    }
+}
+
+@media (max-width: 480px) {
+    .navigation--fixed {
+        display: none !important;
     }
 }
