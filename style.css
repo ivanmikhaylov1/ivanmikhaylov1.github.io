@@ -1,4 +1,39 @@
 /* =====================================================================================
+  Шрифты
+  ===================================================================================== */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXp-p7K4KLg.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM73w5aXp-p7K4KLg.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2) format('woff2');
+}
+
+/* =====================================================================================
   Общие стили и сброс
   ===================================================================================== */
 html, body {
@@ -231,13 +266,18 @@ body {
 .countdown-wrapper {
     text-align: center;
     margin: 3rem 0;
-    color: #283593
+    color: #283593;
+    will-change: transform;
+    transform: translateZ(0);
 }
 
 .degree-countdown {
     font-size: 2rem;
     font-weight: 700;
-    letter-spacing: .05em
+    letter-spacing: .05em;
+    will-change: transform;
+    transform: translateZ(0);
+    display: inline-block;
 }
 
 .section-about {
