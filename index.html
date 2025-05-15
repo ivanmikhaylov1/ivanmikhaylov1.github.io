@@ -2,14 +2,15 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Персональный сайт: портфолио, навыки, контакты">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Персональный сайт: портфолио, навыки, контакты" name="description">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@500;700&display=swap"
+          rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <title>Персональный сайт</title>
 </head>
 <body>
-<header id="header" class="header">
+<header class="header" id="header">
     <div class="header-brand">
         <h1 class="title">Иван Михайлов</h1>
         <p class="subtitle">Студент</p>
@@ -20,64 +21,113 @@
         <div class="header-shape"></div>
     </div>
     <div class="header__images">
-        <img src="elements/my-photo.jpeg" alt="Фотография" class="header__photo" loading="lazy">
+        <img alt="Фотография" class="header__photo" loading="lazy" src="elements/my-photo.jpeg">
     </div>
-    <nav class="navigation" aria-label="Главное меню">
+    <nav aria-label="Главное меню" class="navigation">
         <ul class="menu-list">
-            <li><a href="#about" class="menu-item menu-about">Обо мне</a></li>
-            <li><a href="#portfolio" class="menu-item menu-portfolio">Портфолио</a></li>
-            <li><a href="#skills" class="menu-item menu-skills">Навыки</a></li>
-            <li><a href="#contact" class="menu-item menu-contact">Связаться</a></li>
+            <li><a class="menu-item" href="#about">Обо мне</a></li>
+            <li><a class="menu-item" href="#portfolio">Портфолио</a></li>
+            <li><a class="menu-item" href="#skills">Навыки</a></li>
+            <li>
+                <button class="open-contact">Связаться</button>
+            </li>
         </ul>
     </nav>
-    <img src="elements/Vector.png" alt="Декоративный вектор" class="header__vector" loading="lazy">
+    <img alt="Декоративный вектор" class="header__vector" loading="lazy" src="elements/Vector.png">
 </header>
 
 <main class="main">
-    <section id="about" class="section section-about">
+    <section class="section section-about" id="about">
         <h2 class="section-title">Обо мне</h2>
-        <div class="about-text">
-            <p>
-            </p>
-        </div>
+        <svg id="svg" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient gradientTransform="translate(0 0)" gradientUnits="objectBoundingBox" id="gradient"
+                                spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+                    <stop offset="0%" stop-color="rgba(255,255,255,0)"/>
+                    <stop offset="100%" stop-color="#010022"/>
+                </linearGradient>
+            </defs>
+            <g id="bars" transform="matrix(.999959-.009067 0.009067 0.999959-100.619814 8.869633)">
+                <rect class="bar" height="185" rx="0" ry="0" transform="translate(99.571557 49.605304)" width="14.63"/>
+                <rect class="bar" height="185" rx="0" ry="0"
+                      transform="matrix(.5-.866025 0.866025 0.5 22.694139 102.848672)" width="14.63"/>
+                <rect class="bar" height="185" rx="0" ry="0"
+                      transform="matrix(.5 0.866025-.866025 0.5 183.763964 90.178721)" width="14.63"/>
+                <circle class="dot" r="20" transform="translate(106.886557 142.105304)"/>
+            </g>
+        </svg>
+        <section class="countdown-wrapper">
+            <h2 class="countdown-title">До завершения высшего образования осталось</h2>
+            <div class="degree-countdown" id="degree-countdown">--д --ч --м --с</div>
+        </section>
+        <div class="about-text"></div>
     </section>
 
-    <section id="portfolio" class="section section-portfolio">
+
+    <section class="section section-portfolio" id="portfolio">
         <h2 class="section-title">Портфолио</h2>
         <div class="portfolio-grid">
             <div class="portfolio-item project-java">
                 <div class="portfolio-content">
                     <h3 class="portfolio-title">Телеграм бот для новостных рекомендаций</h3>
-                    <p class="portfolio-description">Проект на Java для отбора статей на сайтах с учетом интересов пользователей с помощью ИИ</p>
+                    <p class="portfolio-description">Проект на Java для отбора статей на сайтах с учетом интересов
+                        пользователей с помощью ИИ</p>
                     <div class="repo-links">
-                        <a href="https://github.com/Ylonies/news_recommendation_java" class="portfolio-link">Github репозиторий (часть 1)</a>
-                        <a href="https://github.com/ivanmikhaylov1/news_recommendation_java" class="portfolio-link">Github репозиторий (часть 2)</a>
+                        <a class="portfolio-link" href="https://github.com/Ylonies/news_recommendation_java">Github
+                            (часть 1)</a>
+                        <a class="portfolio-link" href="https://github.com/ivanmikhaylov1/news_recommendation_java">Github
+                            (часть 2)</a>
                     </div>
                 </div>
             </div>
 
             <div class="portfolio-item project-python">
-                <img src="elements/project.jpg" alt="Игра Морской бой" class="portfolio-image">
+                <img alt="Игра Морской бой" class="portfolio-image" src="elements/project.jpg">
                 <div class="portfolio-content">
-                    <h3 class="portfolio-title">Игра морской бой в формате телеграм бота</h3>
-                    <p class="portfolio-description">Проект на Python - игра морской бой, где главная фишка - возможность запустить бой 2 ботов и кастомизировать визуал</p>
-                    <a href="https://github.com/ivanmikhaylov1/Battleships_Project" class="portfolio-link">Github репозиторий</a>
+                    <h3 class="portfolio-title">Игра морской бой</h3>
+                    <p class="portfolio-description">Python‑бот с возможностью боя двух ботов и кастомизацией
+                        визуала</p>
+                    <a class="portfolio-link" href="https://github.com/ivanmikhaylov1/Battleships_Project">Github</a>
                 </div>
             </div>
 
             <div class="portfolio-item project-website">
                 <div class="portfolio-content">
                     <h3 class="portfolio-title">Персональный сайт</h3>
-                    <p class="portfolio-description">Веб-портфолио с адаптивным дизайном, анимациями и формой обратной связи. Разработан с использованием HTML5, CSS3 и JavaScript.</p>
-                    <div class="repo-links">
-                        <a href="https://github.com/ivanmikhaylov1/ivanmikhaylov1.github.io" class="portfolio-link">Github репозиторий</a>
-                    </div>
+                    <p class="portfolio-description">Адаптивное веб‑портфолио с анимациями и формой обратной связи</p>
+                    <a class="portfolio-link"
+                       href="https://github.com/ivanmikhaylov1/ivanmikhaylov1.github.io">Github</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="section section-skills">
+    <section class="gallery-wrapper">
+        <div class="gallery">
+            <figure class="gallery__item"><img alt="" class="gallery__image"
+                                               src="elements/strange_images/crocodile_milk2.png"></figure>
+            <figure class="gallery__item"><img alt="" class="gallery__image"
+                                               src="elements/strange_images/crocodile_milk.png"></figure>
+            <figure class="gallery__item"><img alt="" class="gallery__image"
+                                               src="elements/strange_images/crocodile_laptop.png"></figure>
+            <figure class="gallery__item"><img alt="" class="gallery__image"
+                                               src="elements/strange_images/crocodile_cigarette.png"></figure>
+            <figure class="gallery__item"><img alt="" class="gallery__image"
+                                               src="elements/strange_images/crocodile_bicycle.png"></figure>
+            <figure class="gallery__item"><img alt="" class="gallery__image"
+                                               src="elements/strange_images/crocodile_bath.png"></figure>
+            <figure class="gallery__item"><img alt="" class="gallery__image"
+                                               src="elements/strange_images/crocodile_cone.png"></figure>
+        </div>
+
+        <div aria-hidden="true" class="lightbox">
+            <button aria-label="Предыдущее" class="lightbox-prev">‹</button>
+            <img alt="" class="lightbox-img" src="">
+            <button aria-label="Следующее" class="lightbox-next">›</button>
+        </div>
+    </section>
+
+    <section class="section section-skills" id="skills">
         <h2 class="section-title">Мои навыки</h2>
         <div class="skills-container">
             <div class="skill-group">
@@ -121,45 +171,63 @@
             </div>
         </div>
     </section>
-
-    <section id="contact" class="section section-contact">
-        <h2 class="section-title">Контакты</h2>
-        <section class="contact-form">
-            <h3 class="form-title">Связаться со мной</h3>
-            <form action="#" method="POST">
-                <label for="name" class="form-label">Ваше имя</label>
-                <input type="text" id="name" name="name" class="form-input" placeholder="Введите ваше имя" required>
-
-                <label for="email" class="form-label">Ваш email</label>
-                <input type="email" id="email" name="email" class="form-input" placeholder="Введите ваш email" required>
-
-                <label for="phone" class="form-label">Ваш телефон</label>
-                <input type="tel" id="phone" name="phone" class="form-input" placeholder="Введите ваш телефон" required>
-
-                <label for="message" class="form-label">Ваш вопрос</label>
-                <textarea id="message" name="message" class="form-input form-textarea" placeholder="Напишите ваш вопрос" minlength="10" required></textarea>
-                <button type="submit" class="form-submit">Отправить</button>
-            </form>
-        </section>
-    </section>
 </main>
 
 <footer class="footer">
-    <a href="#header" class="back-to-top">
-        <img src="elements/arrow-up.png" alt="Вверх" class="back-to-top__icon">
-    </a>
+    <a class="back-to-top" href="#header"><img alt="Вверх" class="back-to-top__icon" src="elements/arrow-up.png"></a>
     <div class="social-links">
-        <a href="https://t.me/Sfafy" target="_blank" rel="noopener noreferrer">
-            <img src="elements/telegram-icon.png" alt="Telegram" class="social-icon">
-        </a>
-        <a href="https://github.com/ivanmikhaylov1" target="_blank" rel="noopener noreferrer">
-            <img src="elements/github-icon.png" alt="GitHub" class="social-icon">
-        </a>
-        <a href="https://leetcode.com/u/VhmMXNX3u4/" target="_blank" rel="noopener noreferrer">
-            <img src="elements/leetcode-icon.png" alt="LeetCode" class="social-icon">
-        </a>
+        <a href="https://t.me/Sfafy" rel="noopener noreferrer" target="_blank"><img alt="Telegram"
+                                                                                    class="social-icon"
+                                                                                    src="elements/telegram-icon.png"></a>
+        <a href="https://github.com/ivanmikhaylov1" rel="noopener noreferrer" target="_blank"><img
+                alt="GitHub" class="social-icon" src="elements/github-icon.png"></a>
+        <a href="https://leetcode.com/u/VhmMXNX3u4/" rel="noopener noreferrer" target="_blank"><img
+                alt="LeetCode" class="social-icon" src="elements/leetcode-icon.png"></a>
     </div>
-    <p class="copyright">@ 2025 Михайлов Иван</p>
+
+    <p class="copyright">@2025 Михайлов Иван</p>
 </footer>
+
+<div aria-hidden="true" class="visit-popup" id="visit-popup">
+    <div class="visit-popup__box">
+        <button aria-label="Закрыть" class="visit-popup__close">×</button>
+        <h3 class="visit-popup__title">Добро пожаловать!</h3>
+        <p class="visit-popup__text">Спасибо, что заглянули.</p>
+    </div>
+</div>
+
+<section class="section section-contact contact-modal" id="contact">
+    <button aria-label="Закрыть" class="contact-close">×</button>
+
+    <h2 class="section-title">Контакты</h2>
+
+    <section class="contact-form">
+        <h3 class="form-title">Связаться со мной</h3>
+
+        <form action="#" method="POST">
+            <label class="form-label" for="name">Ваше имя</label>
+            <input class="form-input" id="name" name="name" placeholder="Иван Иванов">
+
+            <label class="form-label" for="email">Ваш e‑mail</label>
+            <input class="form-input" id="email" name="email" placeholder="example@mail.com">
+
+            <label class="form-label" for="phone">Телефон</label>
+            <input class="form-input" id="phone" name="phone" placeholder="+7 999 123‑45‑67">
+
+            <label class="form-label" for="message">Ваш вопрос</label>
+            <textarea class="form-input form-textarea" id="message" name="message"
+                      placeholder="Напишите сообщение"></textarea>
+
+            <button class="form-submit" type="submit">Отправить</button>
+        </form>
+    </section>
+</section>
+
+<script defer src="scripts/gallery.js"></script>
+<script defer src="scripts/contact-modal.js"></script>
+<script defer src="scripts/form-validation.js"></script>
+<script defer src="scripts/popup-timer.js"></script>
+<script defer src="scripts/degree-countdown.js"></script>
+<script defer src="scripts/sticky-navigation.js"></script>
 </body>
 </html>
